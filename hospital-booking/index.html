@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sankofa Medical Center — compassionate, expert healthcare. Book your appointment online today." />
+  <title>Sankofa Medical Center</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" /> <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+  ============================================================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <!-- Logo / Brand -->
+      <a href="index.html" class="nav-brand" aria-label="Sankofa Medical Center Home">
+        <div class="brand-icon" aria-hidden="true">🏥</div>
+        <div class="brand-name">
+          Sankofa Medical Center
+          <span>Hospital &amp; Medical Center</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="departments.html">Departments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="nav-cta">📅 Book Appointment</a></li>
+        <li id="nav-user-area"></li>
+      </ul>
+
+      <!-- Mobile Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero" aria-label="Welcome hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Hero Text -->
+        <div class="hero-text">
+          <p class="section-badge">🏆 Accredited Medical Excellence</p>
+          <h1>Your Health Is Our <span>Greatest Priority</span></h1>
+          <p>
+            Experience compassionate, world-class healthcare with Sankofa Medical Center.
+            Expert specialists, modern facilities, and a patient-first approach, all in one place.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="booking.html" class="btn btn-cta">📅 Book an Appointment</a>
+            <a href="departments.html" class="btn btn-outline">Our Departments →</a>
+          </div>
+
+          <!-- Trust badges / social proof -->
+          <div class="hero-badges">
+            <div class="hero-badge-item">
+              <div class="badge-icon">✓</div>
+              <span>Board-Certified Doctors</span>
+            </div>
+            <div class="hero-badge-item">
+              <div class="badge-icon">🕐</div>
+              <span>24/7 Emergency Care</span>
+            </div>
+            <div class="hero-badge-item">
+              <div class="badge-icon">🔒</div>
+              <span>100% Confidential</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual (Decorative Cards) -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <div class="hero-card-icon">🏥</div>
+              <div>
+                <h4>Available Departments</h4>
+                <p>6 specialized units</p>
+              </div>
+            </div>
+            <div class="dept-pills">
+              <span class="dept-pill">🫀 Cardiology</span>
+              <span class="dept-pill">🦷 Dentistry</span>
+              <span class="dept-pill">👶 Pediatrics</span>
+              <span class="dept-pill">🦴 Orthopedics</span>
+              <span class="dept-pill">🔬 General Medicine</span>
+              <span class="dept-pill">🤱 Gynecology</span>
+            </div>
+          </div>
+
+          <div class="mini-cards-row">
+            <div class="mini-card">
+              <div class="mini-card-icon">👨‍⚕️</div>
+              <div>
+                <h5>50+ Doctors</h5>
+                <p>Expert specialists</p>
+              </div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon">😊</div>
+              <div>
+                <h5>98% Satisfaction</h5>
+                <p>Patient happiness</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS STRIP
+  ============================================================ -->
+  <section class="stats-strip" aria-label="Hospital statistics">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>15,000+</h3>
+          <p>Patients Treated</p>
+        </div>
+        <div class="stat-item">
+          <h3>50+</h3>
+          <p>Specialist Doctors</p>
+        </div>
+        <div class="stat-item">
+          <h3>6</h3>
+          <p>Departments</p>
+        </div>
+        <div class="stat-item">
+          <h3>20+</h3>
+          <p>Years of Service</p>
+        </div>
+        <div class="stat-item">
+          <h3>98%</h3>
+          <p>Patient Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES OVERVIEW
+  ============================================================ -->
+  <section class="section" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-badge">What We Offer</p>
+        <h2 id="services-heading">Comprehensive Medical Services</h2>
+        <p>From routine check-ups to advanced specialist care, we cover all your healthcare needs under one roof.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service cards -->
+        <article class="service-card">
+          <span class="service-icon">🩺</span>
+          <h3>General Consultations</h3>
+          <p>Experienced GPs available for routine check-ups, diagnoses, and referrals to specialists.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">🫀</span>
+          <h3>Cardiac Care</h3>
+          <p>Advanced cardiovascular diagnostics and treatment by certified cardiologists.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">👶</span>
+          <h3>Pediatric Services</h3>
+          <p>Child-friendly environment with dedicated paediatric specialists from newborn to adolescent.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">🦷</span>
+          <h3>Dental Care</h3>
+          <p>Complete dental health services like cleanings, fillings, orthodontics, and oral surgery.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">🦴</span>
+          <h3>Orthopaedics</h3>
+          <p>Bone and joint care, sports injury rehabilitation, and orthopaedic surgery.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon">🔬</span>
+          <h3>Laboratory & Diagnostics</h3>
+          <p>On-site lab with fast turnaround for blood tests, imaging, and other diagnostics.</p>
+        </article>
+      </div>
+
+      <div class="section-cta">
+        <a href="departments.html" class="btn btn-outline-primary">View All Departments →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHY CHOOSE US
+  ============================================================ -->
+  <section class="section section-alt" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="why-grid">
+
+        <div>
+          <p class="section-badge">Why Sankofa</p>
+          <h2 id="why-heading">Healthcare You Can Trust</h2>
+
+          <div class="why-list">
+            <div class="why-item">
+              <div class="why-item-icon">🏅</div>
+              <div class="why-item-text">
+                <h4>Accredited Specialists</h4>
+                <p>All our physicians are board-certified with decades of combined clinical experience.</p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="why-item-icon">⚡</div>
+              <div class="why-item-text">
+                <h4>Fast, Efficient Service</h4>
+                <p>Online booking and streamlined check-in mean less waiting and more care.</p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="why-item-icon">🔒</div>
+              <div class="why-item-text">
+                <h4>Patient Privacy First</h4>
+                <p>Your medical data and personal information are kept strictly confidential.</p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="why-item-icon">🌍</div>
+              <div class="why-item-text">
+                <h4>Modern Facilities</h4>
+                <p>State-of-the-art equipment ensuring accurate diagnosis and effective treatment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-visual">
+          <div class="big-icon">🏥</div>
+          <h3>Book Your Appointment Today</h3>
+          <p>Don't wait! Your health matters. Schedule with one of our specialists in just minutes.</p>
+          <a href="booking.html" class="btn btn-cta">📅 Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PATIENT TESTIMONIALS
+  ============================================================ -->
+  <section class="section" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-badge">Patient Stories</p>
+        <h2 id="testimonials-heading">What Our Patients Say</h2>
+        <p>Real experiences from real patients who trusted us with their health.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"The cardiology team was amazing. From booking to follow-up, every step was smooth and professional."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">👨</div>
+            <div class="author-info">
+              <h5>Sosu Philip</h5>
+              <p>Cardiology Patient</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Booking online was so easy. The pediatrician was gentle with my daughter and took time to explain everything."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">👩</div>
+            <div class="author-info">
+              <h5>Sharleen Pomaa</h5>
+              <p>Pediatrics Parent</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"After my knee surgery, the orthopaedics team provided outstanding recovery support. Highly recommended!"</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">🧑</div>
+            <div class="author-info">
+              <h5>Emmanuel Asamoah</h5>
+              <p>Orthopaedics Patient</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BANNER
+  ============================================================ -->
+  <section class="cta-banner" aria-label="Call to action">
+    <div class="container">
+      <p class="section-badge">Ready to Get Started?</p>
+      <h2>Take the First Step Towards Better Health</h2>
+      <p>Book your appointment online in minutes. Same-day slots available for urgent consultations.</p>
+      <div class="cta-btns">
+        <a href="booking.html" class="btn btn-cta">📅 Book an Appointment</a>
+        <a href="contact.html" class="btn btn-outline">📞 Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="logo-text">🏥 Sankofa Medical Center</div>
+          <p>Providing compassionate, expert healthcare to our community for over 20 years. Your health, our mission.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Departments -->
+        <div class="footer-col">
+          <h4>Departments</h4>
+          <ul>
+            <li><a href="departments.html">General Medicine</a></li>
+            <li><a href="departments.html">Cardiology</a></li>
+            <li><a href="departments.html">Pediatrics</a></li>
+            <li><a href="departments.html">Orthopaedics</a></li>
+            <li><a href="departments.html">Dentistry</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><span>📍</span><span>Medical Avenue, Kumasi, Ghana</span></div>
+          <div class="footer-contact-item"><span>📞</span><span>+233 25 659 4485</span></div>
+          <div class="footer-contact-item"><span>✉️</span><span>info@sankofamedical.com</span></div>
+          <div class="footer-contact-item"><span>🕐</span><span>Emergency: 24/7 Available</span></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sankofa Medical Center. All rights reserved.</p>
+        <p>Designed with ❤️ for better healthcare.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Navbar Toggle JS (inline — minimal, no external dependency needed) -->
+  <script src="js/auth.js"></script>
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close nav when a link is clicked (mobile UX)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Add shadow on scroll
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>

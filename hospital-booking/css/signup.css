@@ -1,0 +1,292 @@
+/* ============================================================
+   signup.css — Sign Up Page Styles
+   Sankofa Medical Center
+   ============================================================ */
+
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body.auth-page {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #fff;
+}
+
+/* ══════════════════════════════════════
+   LEFT — white form panel
+══════════════════════════════════════ */
+.auth-left {
+  flex: 0 0 52%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 72px;
+  background: #fff;
+}
+
+.auth-form-wrap {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-form-wrap h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+.auth-form-wrap .auth-subtitle {
+  font-size: 0.88rem;
+  color: #6B7280;
+  margin: 0 0 26px;
+}
+
+/* ── Form fields ── */
+.field-group {
+  margin-bottom: 16px;
+}
+
+.field-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.field-group input {
+  display: block;
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #D1D5DB;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #111827;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.field-group input::placeholder {
+  color: #9CA3AF;
+  font-size: 0.85rem;
+}
+
+.field-group input:focus {
+  border-color: #003580;
+  box-shadow: 0 0 0 3px rgba(0, 53, 128, 0.10);
+}
+
+.field-group input.input-error {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.10);
+}
+
+/* ── Password strength ── */
+.pwd-strength {
+  margin-top: 7px;
+  display: none;
+}
+.pwd-strength.visible { display: block; }
+
+.pwd-strength-bar {
+  height: 5px;
+  border-radius: 3px;
+  background: #E5E7EB;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.pwd-strength-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s, background 0.3s;
+  width: 0;
+}
+.pwd-strength-fill.weak   { width: 33%; background: #dc3545; }
+.pwd-strength-fill.fair   { width: 66%; background: #fd7e14; }
+.pwd-strength-fill.strong { width: 100%; background: #28a745; }
+
+.pwd-strength-label {
+  font-size: 0.77rem;
+  font-weight: 600;
+}
+.pwd-strength-label.weak   { color: #dc3545; }
+.pwd-strength-label.fair   { color: #fd7e14; }
+.pwd-strength-label.strong { color: #28a745; }
+
+/* ── Alert banners ── */
+.auth-banner {
+  display: none;
+  padding: 11px 16px;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.auth-banner.visible { display: flex; align-items: center; gap: 8px; }
+
+.auth-banner--error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+/* ── Submit button ── */
+.auth-submit {
+  display: block;
+  width: 100%;
+  padding: 13px 20px;
+  background: #003580;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  margin-top: 6px;
+}
+.auth-submit:hover {
+  background: #0050bf;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 53, 128, 0.24);
+}
+
+/* ── Divider ── */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 20px 0;
+  color: #9CA3AF;
+  font-size: 0.83rem;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #E5E7EB;
+}
+
+/* ── Footer links ── */
+.auth-links {
+  margin-top: 20px;
+  text-align: center;
+}
+.auth-links p {
+  font-size: 0.87rem;
+  color: #6B7280;
+  margin: 0 0 6px;
+}
+.auth-links p:last-child { margin-bottom: 0; }
+.auth-links a {
+  color: #003580;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.auth-links a:hover { color: #0050bf; text-decoration: underline; }
+
+/* ══════════════════════════════════════
+   RIGHT — deep blue illustration panel
+══════════════════════════════════════ */
+.auth-right {
+  flex: 1;
+  background: #003580;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.auth-right::before {
+  content: '';
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 50px solid rgba(255,255,255,0.05);
+  top: -130px;
+  right: -130px;
+  pointer-events: none;
+}
+.auth-right::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 38px solid rgba(255,255,255,0.04);
+  bottom: -90px;
+  left: -90px;
+  pointer-events: none;
+}
+
+.auth-illus-wrap {
+  position: relative;
+  z-index: 1;
+  width: 72%;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-illus-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.auth-right-brand {
+  position: absolute;
+  top: 36px;
+  left: 0; right: 0;
+  text-align: center;
+  z-index: 1;
+}
+.auth-right-brand-name {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+.auth-right-brand-sub {
+  display: block;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: 3px;
+  letter-spacing: 0.5px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 820px) {
+  body.auth-page { flex-direction: column; }
+  .auth-left {
+    flex: none;
+    padding: 36px 28px;
+    min-height: auto;
+  }
+  .auth-right {
+    min-height: 240px;
+    flex: none;
+    order: -1;
+  }
+  .auth-right-brand { top: 16px; }
+  .auth-illus-wrap { max-width: 200px; }
+}
+@media (max-width: 480px) {
+  .auth-left { padding: 28px 18px; }
+  .auth-form-wrap h1 { font-size: 1.7rem; }
+}

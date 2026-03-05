@@ -1,0 +1,202 @@
+/* ============================================================
+   about.css — Page-specific styles for about.html
+   Hospital Booking System
+   ============================================================ */
+
+/* ---- Mission / Vision ---- */
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.mv-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px 32px;
+  border-top: 5px solid var(--primary);
+  transition: transform var(--transition);
+}
+
+.mv-card:hover { transform: translateY(-5px); }
+.mv-card.vision { border-top-color: var(--cta); }
+
+.mv-card .mv-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.mv-card h3 { margin-bottom: 12px; font-size: 1.25rem; }
+.mv-card p  { font-size: 0.95rem; }
+
+/* Extra paragraph inside mission/vision cards */
+.mv-card-extra-p {
+  margin-top: 14px;
+}
+
+/* ---- Values ---- */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.value-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 22px;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.value-item .v-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.value-item h4   { margin-bottom: 8px; }
+.value-item p    { font-size: 0.87rem; }
+
+/* ---- History Timeline ---- */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+.timeline-year {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--accent);
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 50px;
+  margin-bottom: 8px;
+}
+
+.timeline-item h4 { margin-bottom: 6px; font-size: 1rem; }
+.timeline-item p  { font-size: 0.9rem; }
+
+/* ---- Team Section ---- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.team-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.team-avatar {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  padding: 36px 20px 24px;
+  font-size: 4rem;
+}
+
+.team-info {
+  padding: 20px 18px 24px;
+}
+
+.team-info h4    { margin-bottom: 4px; font-size: 1rem; }
+.team-info .role {
+  font-size: 0.83rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.team-info p     { font-size: 0.85rem; color: var(--text-light); }
+
+.team-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.specialty-tag {
+  background: var(--accent);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+/* ---- Accreditations ---- */
+.accred-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.accred-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px 18px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-mid);
+}
+
+.accred-item .acc-icon { font-size: 2.2rem; margin-bottom: 10px; display: block; }
+.accred-item h5 { font-size: 0.9rem; margin-bottom: 4px; }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .mv-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book an appointment at Sankofa Medical Center. Choose your specialist, select a date and time, and confirm your booking online." />
+  <title>Book Appointment | Sankofa Medical Center</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/booking.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Sankofa Medical Center Home">
+        <div class="brand-icon" aria-hidden="true">🏥</div>
+        <div class="brand-name">Sankofa Medical Center<span>Hospital &amp; Medical Center</span></div>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="departments.html">Departments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="nav-cta active" aria-current="page">📅 Book Appointment</a></li>
+        <li id="nav-user-area"></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       PAGE HERO
+  ============================================================ -->
+  <header class="page-hero" role="banner">
+    <div class="container">
+      <p class="section-badge">Quick &amp; Easy</p>
+      <h1>Book an Appointment</h1>
+      <p>Schedule your visit online in minutes. Choose your specialist, date, and time. We'll do the rest.</p>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span aria-current="page">Book Appointment</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       BOOKING SECTION
+  ============================================================ -->
+  <section class="booking-section" aria-labelledby="booking-form-heading">
+    <div class="container">
+      <div class="booking-layout">
+
+        <!-- ---- LEFT: Booking Form Card ---- -->
+        <div class="booking-form-card">
+          <h2 id="booking-form-heading">Appointment Details</h2>
+          <p class="form-subtitle">
+            Please fill in all fields carefully. Fields marked <strong>*</strong> are required.
+          </p>
+
+          <!-- Booking Form -->
+          <form id="booking-form" novalidate aria-label="Appointment booking form">
+
+            <!-- Section 1: Personal Info -->
+            <p class="form-section-title">👤 Personal Information</p>
+
+            <!-- Full Name -->
+            <div class="form-group">
+              <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                placeholder="e.g. Kwame Asante"
+                autocomplete="name"
+                required
+                aria-required="true"
+                aria-describedby="full-name-error"
+              />
+              <span class="error-msg" id="full-name-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <!-- Email & Phone in a row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="email-error"
+                />
+                <span class="error-msg" id="email-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="e.g. 0244 123 456"
+                  autocomplete="tel"
+                  required
+                  aria-required="true"
+                  aria-describedby="phone-error"
+                />
+                <span class="error-msg" id="phone-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <!-- Section 2: Appointment Details -->
+            <p class="form-section-title">📋 Appointment Details</p>
+
+            <!-- Department -->
+            <div class="form-group">
+              <label for="department">Department / Specialist <span aria-hidden="true">*</span></label>
+              <select
+                id="department"
+                name="department"
+                required
+                aria-required="true"
+                aria-describedby="dept-error"
+              >
+                <option value="">— Select a Department —</option>
+                <option value="general-medicine">🩺 General Medicine</option>
+                <option value="cardiology">🫀 Cardiology</option>
+                <option value="pediatrics">👶 Pediatrics</option>
+                <option value="orthopedics">🦴 Orthopaedics</option>
+                <option value="gynecology">🤱 Gynecology</option>
+                <option value="dentistry">🦷 Dentistry</option>
+              </select>
+              <span class="error-msg" id="dept-error" role="alert" aria-live="polite"></span>
+              <!-- Dynamic available hours note shown by JS -->
+              <small id="dept-hours-note"></small>
+            </div>
+
+            <!-- Date & Time in a row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="appt-date">Preferred Date <span aria-hidden="true">*</span></label>
+                <input
+                  type="date"
+                  id="appt-date"
+                  name="appt-date"
+                  required
+                  aria-required="true"
+                  aria-describedby="date-error"
+                />
+                <span class="error-msg" id="date-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="appt-time">Preferred Time <span aria-hidden="true">*</span></label>
+                <input
+                  type="time"
+                  id="appt-time"
+                  name="appt-time"
+                  min="08:00"
+                  max="18:00"
+                  required
+                  aria-required="true"
+                  aria-describedby="time-error"
+                />
+                <span class="error-msg" id="time-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <!-- Section 3: Additional Info -->
+            <p class="form-section-title">📝 Additional Information</p>
+
+            <!-- Notes -->
+            <div class="form-group">
+              <label for="notes">Additional Notes <span class="label-optional">(optional)</span></label>
+              <textarea
+                id="notes"
+                name="notes"
+                placeholder="Describe your symptoms or anything the doctor should know before your visit..."
+                aria-describedby="notes-hint"
+              ></textarea>
+              <small id="notes-hint">Max 500 characters. Do not include sensitive personal information.</small>
+            </div>
+
+            <!-- Privacy Consent -->
+            <div class="form-group form-group--row">
+              <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                required
+                class="consent-checkbox"
+              />
+              <label for="consent" class="consent-label">
+                I consent to Sankofa Medical Center storing my booking information for appointment management purposes.
+              </label>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-actions">
+              <button type="submit" class="btn btn-cta">
+                ✅ Confirm Appointment
+              </button>
+              <span class="form-note">🔒 Your information is kept private &amp; secure.</span>
+            </div>
+
+          </form>
+
+          <!-- ============================================================
+               CONFIRMATION BOX (hidden until successful submit)
+          ============================================================ -->
+          <div class="confirmation-box" id="confirmation-box" role="region" aria-label="Booking confirmation" aria-live="polite">
+            <span class="confirm-icon" aria-hidden="true">🎉</span>
+            <h3>Appointment Confirmed!</h3>
+            <p>Thank you, <strong id="confirm-name"></strong>. Your appointment has been successfully booked.</p>
+            <p>Please save your reference number and arrive 15 minutes before your scheduled time.</p>
+
+            <!-- Booking Summary -->
+            <div class="confirm-summary">
+              <table class="confirm-table">
+                <tr>
+                  <td class="confirm-td-label">Department:</td>
+                  <td class="confirm-td-value" id="confirm-dept"></td>
+                </tr>
+                <tr>
+                  <td class="confirm-td-label">Date:</td>
+                  <td class="confirm-td-value" id="confirm-date"></td>
+                </tr>
+                <tr>
+                  <td class="confirm-td-label">Time:</td>
+                  <td class="confirm-td-value" id="confirm-time"></td>
+                </tr>
+              </table>
+            </div>
+
+            <p>Your booking reference:</p>
+            <div class="confirm-ref" id="confirm-ref" aria-label="Booking reference number"></div>
+
+            <button id="book-another-btn" class="btn btn-primary">📅 Book Another Appointment</button>
+          </div>
+
+        </div><!-- /booking-form-card -->
+
+        <!-- ---- RIGHT: Sidebar ---- -->
+        <aside class="booking-sidebar" aria-label="Booking information">
+
+          <!-- Working Hours -->
+          <div class="info-card">
+            <h4>🕐 Working Hours</h4>
+            <ul class="hours-list" aria-label="Clinic working hours">
+              <li><span class="day">Monday</span>    <span class="time">8:00 AM – 6:00 PM</span></li>
+              <li><span class="day">Tuesday</span>   <span class="time">8:00 AM – 6:00 PM</span></li>
+              <li><span class="day">Wednesday</span> <span class="time">8:00 AM – 6:00 PM</span></li>
+              <li><span class="day">Thursday</span>  <span class="time">8:00 AM – 6:00 PM</span></li>
+              <li><span class="day">Friday</span>    <span class="time">8:00 AM – 6:00 PM</span></li>
+              <li><span class="day">Saturday</span>  <span class="time">9:00 AM – 2:00 PM</span></li>
+              <li><span class="day">Sunday</span>    <span class="time closed">Closed</span></li>
+            </ul>
+          </div>
+
+          <!-- Booking Tips -->
+          <div class="info-card">
+            <h4>💡 Helpful Tips</h4>
+            <div class="tips-list">
+              <div class="tip-item">
+                <div class="tip-icon" aria-hidden="true">📋</div>
+                <p>Bring your ID, insurance card, and any relevant medical records to your appointment.</p>
+              </div>
+              <div class="tip-item">
+                <div class="tip-icon" aria-hidden="true">⏰</div>
+                <p>Arrive at least 15 minutes early for registration and triage.</p>
+              </div>
+              <div class="tip-item">
+                <div class="tip-icon" aria-hidden="true">📞</div>
+                <p>Need to reschedule? Call us at least 24 hours in advance.</p>
+              </div>
+              <div class="tip-item">
+                <div class="tip-icon" aria-hidden="true">🚨</div>
+                <p>For medical emergencies, do not book online — go directly to our Emergency Unit or call 112.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Contact -->
+          <div class="info-card">
+            <h4>📞 Quick Contact</h4>
+            <div class="quick-contact">
+              <a href="tel:+233302000111" aria-label="Call our main line">
+                <span>📞</span>
+                <span>+233 302 000 111 (Main)</span>
+              </a>
+              <a href="tel:+233256594485" aria-label="Call our emergency line">
+                <span>🚨</span>
+                <span>+233 25 659 4485 (Emergency)</span>
+              </a>
+              <a href="mailto:appoint@sankofamedicalcenter.com" aria-label="Send us an email">
+                <span>✉️</span>
+                <span>appoint@sankofamedicalcenter.com</span>
+              </a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div><!-- /booking-layout -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">🏥 Sankofa Medical Center</div>
+          <p>Providing compassionate, expert healthcare to our community for over 20 years.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Departments</h4>
+          <ul>
+            <li><a href="departments.html">General Medicine</a></li>
+            <li><a href="departments.html">Cardiology</a></li>
+            <li><a href="departments.html">Pediatrics</a></li>
+            <li><a href="departments.html">Orthopaedics</a></li>
+            <li><a href="departments.html">Dentistry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><span>📍</span><span>Medical Avenue, Kumasi, Ghana</span></div>
+          <div class="footer-contact-item"><span>📞</span><span>+233 25 659 4485</span></div>
+          <div class="footer-contact-item"><span>✉️</span><span>info@sankofamedicalcenter.com</span></div>
+          <div class="footer-contact-item"><span>🕐</span><span>Emergency: 24/7 Available</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sankofa Medical Center. All rights reserved.</p>
+        <p>Designed with ❤️ for better healthcare.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SCRIPTS — validation must load before booking
+  ============================================================ -->
+  <script src="js/auth.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/booking.js"></script>
+
+  <!-- Navbar + URL param pre-selection -->
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Pre-select department from URL query param e.g. booking.html?dept=cardiology
+    (function preselectDept() {
+      const params = new URLSearchParams(window.location.search);
+      const dept   = params.get('dept');
+      if (dept) {
+        const select = document.getElementById('department');
+        if (select) {
+          // Trigger change after DOM is ready so the hours note also updates
+          select.value = dept;
+          select.dispatchEvent(new Event('change'));
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

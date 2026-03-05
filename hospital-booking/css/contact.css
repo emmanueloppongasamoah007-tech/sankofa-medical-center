@@ -1,0 +1,218 @@
+/* ============================================================
+   contact.css — Page-specific styles for contact.html
+   Hospital Booking System
+   ============================================================ */
+
+/* ---- Contact Layout ---- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ---- Contact Form Card ---- */
+.contact-form-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 44px 48px;
+}
+
+.contact-form-card h2 { margin-bottom: 6px; }
+.contact-form-card .form-subtitle {
+  color: var(--text-light);
+  font-size: 0.93rem;
+  margin-bottom: 32px;
+  padding-bottom: 22px;
+  border-bottom: 2px dashed var(--border);
+}
+
+.contact-form-card textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* ---- Submit button wrapper ---- */
+.contact-submit-wrapper {
+  margin-top: 28px;
+}
+
+.contact-submit-wrapper .btn-cta {
+  padding: 13px 32px;
+  font-size: 1rem;
+}
+
+/* ---- Reset / send-another button ---- */
+.btn-reset-contact {
+  margin-top: 16px;
+}
+
+/* ---- Contact Info Sidebar ---- */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact-info-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.contact-info-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Contact detail items */
+.contact-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.contact-detail-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.contact-detail-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  background: var(--accent);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.contact-detail-item .cdi-label {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 2px;
+  display: block;
+}
+
+.contact-detail-item .cdi-value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  display: block;
+}
+
+.contact-detail-item a.cdi-value {
+  color: var(--primary);
+}
+.contact-detail-item a.cdi-value:hover {
+  text-decoration: underline;
+}
+
+/* ---- Opening Hours Table ---- */
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.hours-table .hours-row {
+  border-bottom: 1px dashed var(--border);
+}
+
+.hours-table td:first-child {
+  padding: 8px 0;
+  color: var(--text-mid);
+}
+
+.hours-table td:last-child {
+  padding: 8px 0;
+  font-weight: 600;
+  text-align: right;
+  color: var(--primary);
+}
+
+.hours-table .hours-closed td:last-child {
+  color: #dc3545;
+}
+
+.hours-table .hours-emergency td:last-child {
+  color: var(--cta);
+}
+
+/* ---- Map Placeholder ---- */
+.map-placeholder {
+  background: linear-gradient(135deg, var(--accent), #c8dafc);
+  border-radius: var(--radius);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--primary);
+  font-size: 0.92rem;
+  font-weight: 500;
+  border: 2px dashed var(--primary);
+  text-align: center;
+  padding: 20px;
+}
+
+.map-placeholder .map-icon { font-size: 2.5rem; }
+
+.map-cta {
+  margin-top: 10px;
+}
+
+/* ---- FAQ Section ---- */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.faq-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  border-left: 4px solid var(--primary);
+  transition: transform var(--transition);
+}
+
+.faq-item:hover { transform: translateX(4px); }
+.faq-item h4 { margin-bottom: 8px; font-size: 0.97rem; }
+.faq-item p  { font-size: 0.88rem; }
+
+/* ---- Contact Success Message ---- */
+#contact-success {
+  display: none;
+  text-align: center;
+  padding: 32px 24px;
+  background: #d4edda;
+  border: 2px solid #28a745;
+  border-radius: var(--radius);
+  margin-top: 20px;
+}
+#contact-success .cs-icon  { font-size: 3rem; margin-bottom: 12px; display: block; }
+#contact-success h3 { color: #155724; margin-bottom: 8px; }
+#contact-success p  { color: #155724; font-size: 0.93rem; }
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .contact-layout { grid-template-columns: 1fr; }
+  .contact-sidebar { display: grid; grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .contact-form-card { padding: 28px 22px; }
+  .contact-sidebar   { grid-template-columns: 1fr; }
+  .faq-grid          { grid-template-columns: 1fr; }
+}

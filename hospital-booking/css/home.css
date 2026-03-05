@@ -1,0 +1,340 @@
+/* ============================================================
+   home.css — Page-specific styles for index.html (Home)
+   Hospital Booking System
+   ============================================================ */
+
+/* -------- Hero Section -------- */
+.hero {
+  background: linear-gradient(135deg, #002359 0%, #003580 55%, #0050bf 100%);
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+/* Decorative blob shapes */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.07;
+}
+.hero::before {
+  width: 600px; height: 600px;
+  background: #fff;
+  top: -200px; right: -150px;
+}
+.hero::after {
+  width: 400px; height: 400px;
+  background: #e8f0fe;
+  bottom: -150px; left: -100px;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+}
+
+.hero-text h1 span { color: #7eb8ff; }
+
+.hero-text p {
+  color: rgba(255,255,255,0.82);
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+  max-width: 500px;
+  line-height: 1.8;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Hero trust badges */
+.hero-badges {
+  display: flex;
+  gap: 24px;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+.hero-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.88rem;
+}
+
+.hero-badge-item .badge-icon {
+  width: 30px; height: 30px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+/* Hero illustration card */
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 20px;
+  padding: 24px;
+  color: #fff;
+}
+
+.hero-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hero-card-icon {
+  width: 44px; height: 44px;
+  background: var(--cta);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.hero-card-header div h4 {
+  color: #fff;
+  font-size: 0.97rem;
+  margin-bottom: 2px;
+}
+
+.hero-card-header div p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.dept-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dept-pill {
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+  font-size: 0.78rem;
+  padding: 5px 12px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Small appointment summary cards row */
+.mini-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.mini-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 16px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #fff;
+}
+
+.mini-card-icon {
+  font-size: 1.7rem;
+}
+
+.mini-card div h5 { color: #fff; font-size: 0.92rem; margin-bottom: 3px; }
+.mini-card div p  { color: rgba(255,255,255,0.65); font-size: 0.8rem; margin: 0; }
+
+/* -------- Services Overview -------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px 28px;
+  border-top: 4px solid var(--primary);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.service-icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+}
+
+/* -------- Why Choose Us -------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.why-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.why-item-icon {
+  width: 48px; height: 48px;
+  min-width: 48px;
+  background: var(--accent);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.why-item-text h4 { margin-bottom: 6px; }
+.why-item-text p  { font-size: 0.92rem; }
+
+.why-visual {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.why-visual .big-icon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.why-visual h3 { color: #fff; margin-bottom: 12px; }
+.why-visual p  { color: rgba(255,255,255,0.78); font-size: 0.94rem; margin-bottom: 24px; }
+
+/* -------- CTA Banner -------- */
+.cta-banner {
+  background: linear-gradient(135deg, var(--primary) 0%, #0050bf 100%);
+  padding: 80px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.cta-banner h2 { color: #fff; margin-bottom: 14px; }
+.cta-banner p  {
+  color: rgba(255,255,255,0.82);
+  font-size: 1.05rem;
+  margin-bottom: 36px;
+  max-width: 550px;
+  margin-inline: auto;
+}
+.cta-banner .cta-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+/* -------- Testimonials -------- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  transition: transform var(--transition);
+}
+
+.testimonial-card:hover { transform: translateY(-4px); }
+
+.stars { color: #ffc107; font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
+
+.testimonial-card blockquote {
+  font-size: 0.93rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.author-info h5 { font-size: 0.9rem; color: var(--text-dark); margin-bottom: 2px; }
+.author-info p  { font-size: 0.78rem; color: var(--text-light); margin: 0; }
+
+/* -------- Responsive -------- */
+@media (max-width: 900px) {
+  .hero-inner  { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .why-grid    { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,221 @@
+/* ============================================================
+   departments.css — Page-specific styles for departments.html
+   Hospital Booking System
+   ============================================================ */
+
+/* ---- Department Cards Grid ---- */
+.dept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 32px;
+}
+
+.dept-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.dept-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Coloured header band per department */
+.dept-card-header {
+  padding: 32px 28px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.dept-card.general    .dept-card-header { background: linear-gradient(135deg, #003580, #0050bf); }
+.dept-card.cardiology .dept-card-header { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+.dept-card.pediatrics .dept-card-header { background: linear-gradient(135deg, #1a6b3a, #28a745); }
+.dept-card.ortho      .dept-card-header { background: linear-gradient(135deg, #825200, #f39c12); }
+.dept-card.gynecology .dept-card-header { background: linear-gradient(135deg, #7b1fa2, #9c27b0); }
+.dept-card.dentistry  .dept-card-header { background: linear-gradient(135deg, #006064, #00acc1); }
+
+.dept-emoji-wrap {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+}
+
+.dept-card-header h3 { color: #fff; font-size: 1.2rem; margin-bottom: 6px; }
+.dept-card-header .dept-head-sub {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.82rem;
+}
+
+/* Card body */
+.dept-card-body {
+  padding: 24px 28px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dept-card-body p {
+  font-size: 0.93rem;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+/* Services list */
+.dept-services {
+  margin-bottom: 22px;
+}
+
+.dept-services h5 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.dept-services ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.dept-services ul li {
+  background: var(--accent);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 11px;
+  border-radius: 50px;
+}
+
+/* Hours */
+.dept-hours {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  background: var(--off-white);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+}
+
+/* Book button */
+.dept-card-body .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ---- Emergency Banner ---- */
+.emergency-banner {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.emergency-banner .emerg-icon { font-size: 3rem; }
+.emergency-banner h3 { color: #fff; margin-bottom: 6px; font-size: 1.3rem; }
+.emergency-banner p  { color: rgba(255,255,255,0.85); font-size: 0.93rem; margin: 0; }
+
+.emergency-banner .emerg-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.emerg-phone-btn {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.4);
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.emerg-phone-btn:hover { background: rgba(255,255,255,0.32); color: #fff; }
+
+/* ---- Process Steps ---- */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+  position: relative;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: var(--accent);
+  z-index: 0;
+}
+
+.step {
+  text-align: center;
+  padding: 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-num {
+  width: 64px;
+  height: 64px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 auto 18px;
+  border: 4px solid var(--white);
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+.step h4 { margin-bottom: 8px; }
+.step p   { font-size: 0.87rem; }
+
+/* Centred CTA below process steps */
+.dept-cta {
+  text-align: center;
+  margin-top: 52px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .dept-grid { grid-template-columns: 1fr; }
+  .process-steps::before { display: none; }
+  .emergency-banner { flex-direction: column; }
+  .emergency-banner .emerg-actions { margin-left: 0; }
+}

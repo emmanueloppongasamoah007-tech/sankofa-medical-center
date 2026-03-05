@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Sankofa Medical Center's specialist departments: General Medicine, Cardiology, Pediatrics, Orthopaedics, Gynecology, and Dentistry." />
+  <title>Departments | Sankofa Medical Center</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/departments.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Sankofa Medical Center Home">
+        <div class="brand-icon" aria-hidden="true">🏥</div>
+        <div class="brand-name">Sankofa Medical Center<span>Hospital &amp; Medical Center</span></div>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="departments.html" class="active" aria-current="page">Departments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="nav-cta">📅 Book Appointment</a></li>
+        <li id="nav-user-area"></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       PAGE HERO
+  ============================================================ -->
+  <header class="page-hero" role="banner">
+    <div class="container">
+      <p class="section-badge">Specialist Care</p>
+      <h1>Our Departments &amp; Services</h1>
+      <p>Six specialist departments staffed by experienced clinicians, equipped with the latest medical technology.</p>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span aria-current="page">Departments</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       DEPARTMENTS GRID
+  ============================================================ -->
+  <section class="section" aria-labelledby="depts-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-badge">What We Treat</p>
+        <h2 id="depts-heading">Specialist Departments</h2>
+        <p>Each department is led by fellowship-trained specialists committed to the best outcomes.</p>
+      </div>
+
+      <div class="dept-grid">
+
+        <!-- 1 — General Medicine -->
+        <article class="dept-card general">
+          <div class="dept-card-header">
+            <div class="dept-emoji-wrap" aria-hidden="true">🩺</div>
+            <div>
+              <h3>General Medicine</h3>
+              <p class="dept-head-sub">Head: Dr. Kweku Mensah, MD</p>
+            </div>
+          </div>
+          <div class="dept-card-body">
+            <p>
+              Our General Medicine department is your first point of care for comprehensive health evaluations,
+              chronic disease management, and referrals to specialist units.
+            </p>
+            <div class="dept-services">
+              <h5>Services Offered</h5>
+              <ul>
+                <li>Full Health Check-ups</li>
+                <li>Chronic Disease Management</li>
+                <li>Vaccinations</li>
+                <li>Travel Medicine</li>
+                <li>Hypertension Care</li>
+                <li>Diabetes Management</li>
+              </ul>
+            </div>
+            <div class="dept-hours">⏰ <span>Mon – Fri: 8 AM – 6 PM &nbsp;|&nbsp; Sat: 9 AM – 1 PM</span></div>
+            <a href="booking.html?dept=general-medicine" class="btn btn-primary">📅 Book Appointment</a>
+          </div>
+        </article>
+
+        <!-- 2 — Cardiology -->
+        <article class="dept-card cardiology">
+          <div class="dept-card-header">
+            <div class="dept-emoji-wrap" aria-hidden="true">🫀</div>
+            <div>
+              <h3>Cardiology</h3>
+              <p class="dept-head-sub">Head: Dr. Ama Osei, FWACP</p>
+            </div>
+          </div>
+          <div class="dept-card-body">
+            <p>
+              Our Cardiology unit provides comprehensive diagnosis and treatment for all heart conditions,
+              from preventive care to advanced interventional procedures.
+            </p>
+            <div class="dept-services">
+              <h5>Services Offered</h5>
+              <ul>
+                <li>Echocardiography</li>
+                <li>ECG &amp; Holter Monitoring</li>
+                <li>Stress Testing</li>
+                <li>Heart Failure Management</li>
+                <li>Arrhythmia Treatment</li>
+                <li>Cardiac Rehab</li>
+              </ul>
+            </div>
+            <div class="dept-hours">⏰ <span>Mon – Thu: 8 AM – 4 PM</span></div>
+            <a href="booking.html?dept=cardiology" class="btn btn-primary">📅 Book Appointment</a>
+          </div>
+        </article>
+
+        <!-- 3 — Pediatrics -->
+        <article class="dept-card pediatrics">
+          <div class="dept-card-header">
+            <div class="dept-emoji-wrap" aria-hidden="true">👶</div>
+            <div>
+              <h3>Pediatrics</h3>
+              <p class="dept-head-sub">Head: Dr. Yaw Boateng, FGCP</p>
+            </div>
+          </div>
+          <div class="dept-card-body">
+            <p>
+              A welcoming, child-friendly environment where our paediatric specialists provide expert care
+              from newborn screenings through to adolescent health.
+            </p>
+            <div class="dept-services">
+              <h5>Services Offered</h5>
+              <ul>
+                <li>Newborn Screening</li>
+                <li>Childhood Immunisation</li>
+                <li>Growth Monitoring</li>
+                <li>Neonatal Intensive Care</li>
+                <li>Adolescent Medicine</li>
+                <li>Developmental Assessments</li>
+              </ul>
+            </div>
+            <div class="dept-hours">⏰ <span>Mon – Fri: 9 AM – 5 PM &nbsp;|&nbsp; Sat: 10 AM – 12 PM</span></div>
+            <a href="booking.html?dept=pediatrics" class="btn btn-primary">📅 Book Appointment</a>
+          </div>
+        </article>
+
+        <!-- 4 — Orthopaedics -->
+        <article class="dept-card ortho">
+          <div class="dept-card-header">
+            <div class="dept-emoji-wrap" aria-hidden="true">🦴</div>
+            <div>
+              <h3>Orthopaedics</h3>
+              <p class="dept-head-sub">Head: Dr. Efua Darko, FRCS</p>
+            </div>
+          </div>
+          <div class="dept-card-body">
+            <p>
+              Our Orthopaedics team treats conditions affecting bones, joints, muscles, and ligaments,
+              from minor sports injuries to complex joint replacement surgeries.
+            </p>
+            <div class="dept-services">
+              <h5>Services Offered</h5>
+              <ul>
+                <li>Joint Replacement</li>
+                <li>Fracture Care</li>
+                <li>Sports Injury Rehab</li>
+                <li>Arthritis Treatment</li>
+                <li>Spine Surgery</li>
+                <li>Physiotherapy</li>
+              </ul>
+            </div>
+            <div class="dept-hours">⏰ <span>Mon – Fri: 8 AM – 5 PM</span></div>
+            <a href="booking.html?dept=orthopedics" class="btn btn-primary">📅 Book Appointment</a>
+          </div>
+        </article>
+
+        <!-- 5 — Gynecology -->
+        <article class="dept-card gynecology">
+          <div class="dept-card-header">
+            <div class="dept-emoji-wrap" aria-hidden="true">🤱</div>
+            <div>
+              <h3>Gynecology</h3>
+              <p class="dept-head-sub">Head: Dr. Adwoa Asare, MRCOG</p>
+            </div>
+          </div>
+          <div class="dept-card-body">
+            <p>
+              Comprehensive women's health services including routine gynaecological care,
+              antenatal support, and minimally invasive surgical procedures.
+            </p>
+            <div class="dept-services">
+              <h5>Services Offered</h5>
+              <ul>
+                <li>Antenatal Care</li>
+                <li>Postnatal Support</li>
+                <li>Cervical Screening</li>
+                <li>Menstrual Disorders</li>
+                <li>Fertility Consultations</li>
+                <li>Family Planning</li>
+              </ul>
+            </div>
+            <div class="dept-hours">⏰ <span>Mon – Fri: 9 AM – 5 PM &nbsp;|&nbsp; Sat: 9 AM – 12 PM</span></div>
+            <a href="booking.html?dept=gynecology" class="btn btn-primary">📅 Book Appointment</a>
+          </div>
+        </article>
+
+        <!-- 6 — Dentistry -->
+        <article class="dept-card dentistry">
+          <div class="dept-card-header">
+            <div class="dept-emoji-wrap" aria-hidden="true">🦷</div>
+            <div>
+              <h3>Dentistry</h3>
+              <p class="dept-head-sub">Head: Dr. Kofi Amponsah, BDS, MDS</p>
+            </div>
+          </div>
+          <div class="dept-card-body">
+            <p>
+              From routine teeth cleaning to advanced orthodontic treatments and oral surgery,
+              our dental team provides comprehensive oral health care for the whole family.
+            </p>
+            <div class="dept-services">
+              <h5>Services Offered</h5>
+              <ul>
+                <li>Teeth Cleaning</li>
+                <li>Fillings &amp; Extractions</li>
+                <li>Orthodontics</li>
+                <li>Root Canal Therapy</li>
+                <li>Teeth Whitening</li>
+                <li>Oral Surgery</li>
+              </ul>
+            </div>
+            <div class="dept-hours">⏰ <span>Mon – Sat: 8 AM – 6 PM</span></div>
+            <a href="booking.html?dept=dentistry" class="btn btn-primary">📅 Book Appointment</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Emergency Banner -->
+      <div class="emergency-banner" role="alert">
+        <div class="emerg-icon" aria-hidden="true">🚨</div>
+        <div>
+          <h3>Need Emergency Care?</h3>
+          <p>Our emergency unit is staffed 24 hours a day, 7 days a week. Do not wait, come in immediately for urgent medical attention.</p>
+        </div>
+        <div class="emerg-actions">
+          <a href="tel:+233 25 659 4485" class="emerg-phone-btn">📞 Call Emergency</a>
+          <a href="contact.html" class="emerg-phone-btn">🗺️ Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW IT WORKS
+  ============================================================ -->
+  <section class="section section-alt" aria-labelledby="process-heading">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-badge">Simple &amp; Easy</p>
+        <h2 id="process-heading">How to Book an Appointment</h2>
+        <p>Getting care at Sankofa Medical Center is straightforward. Follow these 4 simple steps.</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Choose Department</h4>
+          <p>Select the specialist department that matches your health concern.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Pick a Date &amp; Time</h4>
+          <p>Choose your preferred appointment slot from available times.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>Fill In Details</h4>
+          <p>Provide your contact information and any relevant notes for the doctor.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h4>Confirm &amp; Attend</h4>
+          <p>Receive your booking reference and arrive on time for your appointment.</p>
+        </div>
+      </div>
+
+      <div class="dept-cta">
+        <a href="booking.html" class="btn btn-cta">📅 Book Your Appointment Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">🏥 Sankofa Medical Center</div>
+          <p>Providing compassionate, expert healthcare to our community for over 20 years.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="booking.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Departments</h4>
+          <ul>
+            <li><a href="departments.html">General Medicine</a></li>
+            <li><a href="departments.html">Cardiology</a></li>
+            <li><a href="departments.html">Pediatrics</a></li>
+            <li><a href="departments.html">Orthopaedics</a></li>
+            <li><a href="departments.html">Dentistry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><span>📍</span><span>Medical Avenue, Kumasi, Ghana</span></div>
+          <div class="footer-contact-item"><span>📞</span><span>+233 25 659 4485</span></div>
+          <div class="footer-contact-item"><span>✉️</span><span>info@sankofamedicalcenter.com</span></div>
+          <div class="footer-contact-item"><span>🕐</span><span>Emergency: 24/7 Available</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sankofa Medical Center. All rights reserved.</p>
+        <p>Designed with ❤️ for better healthcare.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS: Navbar + Pre-select department from URL param -->
+  <script src="js/auth.js"></script>
+  <script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>
