@@ -115,3 +115,12 @@ sankofa-medical-center/
 - **Lecturer:** Dr Linda Amoako Banning
 - **Institution:** KNUST, Department of Computer Science
 - **Submission:** March 2026
+
+## Bugs and Fixes
+*We made some changes with the client’s reviews name list and changed the names of two(2)doctors. 
+*UI design-Made changes on the administrator dashboard 
+*Changed the UI of the admin dashboard
+*Made changes in the Department card-Cardiology.
+*Made changes to some colors in the admin-dashboard table-appointment.
+*Changes made to the Booking consent form in the Booking Page
+
