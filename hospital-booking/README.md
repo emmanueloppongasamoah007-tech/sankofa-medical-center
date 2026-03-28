@@ -112,6 +112,6 @@ sankofa-medical-center/
 
 ## 📋 Course Information
 - **Course:** BIT 293 — Web-Based Concepts & Technology I
-- **Lecturer:** Linda Amoako Banning
+- **Lecturer:** Dr Linda Amoako Banning
 - **Institution:** KNUST, Department of Computer Science
 - **Submission:** March 2026
