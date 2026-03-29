@@ -116,11 +116,30 @@ sankofa-medical-center/
 - **Institution:** KNUST, Department of Computer Science
 - **Submission:** March 2026
 
-## Bugs and Fixes
+## Changes
 *We made some changes with the client’s reviews name list and changed the names of two(2)doctors. 
 *UI design-Made changes on the administrator dashboard 
 *Changed the UI of the admin dashboard
 *Made changes in the Department card-Cardiology.
 *Made changes to some colors in the admin-dashboard table-appointment.
 *Changes made to the Booking consent form in the Booking Page
+
+## Quality Assurance Testing
+**QA INSPECTOR: BRAIMA ABDUL AWAL
+
+### Test Results
+| Feature | Status |
+|---------|--------|
+| All navbar links | ✅ Pass |
+| Login form validation | ✅ Pass |
+| Signup form validation | ✅ Pass |
+| Booking form validation | ✅ Pass |
+| Contact form validation | ✅ Pass |
+| localStorage saving appointments | ✅ Pass |
+| Admin dashboard loading | ✅ Pass |
+| Admin cancel appointment | ✅ Pass |
+| Responsive design on mobile | ✅ Pass |
+| Cross-browser compatibility | ✅ Pass |
+
+ ### Bugs Found zero bugs. All pages and features are  functioning as expected.
 
