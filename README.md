@@ -42,33 +42,32 @@ Built as a Capstone Project for **BIT 293 - Web-Based Concepts & Technology I**
 ```
 sankofa-medical-center/
 │
-├── hospital-booking/
-│   ├── index.html
-│   ├── about.html
-│   ├── departments.html
-│   ├── booking.html
-│   ├── contact.html
-│   ├── login.html
-│   ├── signup.html
-│   ├── admin.html
-│   │
-│   ├── css/
-│   │   ├── style.css
-│   │   ├── navbar.css
-│   │   ├── home.css
-│   │   ├── about.css
-│   │   ├── departments.css
-│   │   ├── booking.css
-│   │   ├── contact.css
-│   │   ├── login.css
-│   │   ├── signup.css
-│   │   └── admin.css
-│   │
-│   └── js/
-│       ├── auth.js
-│       ├── validation.js
-│       ├── booking.js
-│       └── admin.js
+├── index.html
+├── about.html
+├── departments.html
+├── booking.html
+├── contact.html
+├── login.html
+├── signup.html
+├── admin.html
+│
+├── css/
+│   ├── style.css
+│   ├── navbar.css
+│   ├── home.css
+│   ├── about.css
+│   ├── departments.css
+│   ├── booking.css
+│   ├── contact.css
+│   ├── login.css
+│   ├── signup.css
+│   └── admin.css
+│
+└── js/
+   ├── auth.js
+   ├── validation.js
+   ├── booking.js
+   └── admin.js
 ```
 
 ---
@@ -100,7 +99,7 @@ sankofa-medical-center/
    ```bash
    live-server
    ```
-4. Open `http://127.0.0.1:8080/hospital-booking/` in your browser
+4. Open `http://127.0.0.1:8080/` in your browser
 
 ---
 
